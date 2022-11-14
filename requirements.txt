@@ -1,2 +1,4 @@
 keyboard
+numpy
 pyautogui
+pyperclip

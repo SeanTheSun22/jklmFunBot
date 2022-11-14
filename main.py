@@ -66,8 +66,8 @@ def inputword(Words, Letters, n, Position, BonusLifeLetters):
         time.sleep(random.uniform(0.075, 0.1))
 
     BonusLifeLetters = diff(BonusLifeLetters, Words[rand])
-    print("Inputted:", Words[rand])
-    print("Remaining Letters", BonusLifeLetters)
+    print("         Inputted:", Words[rand])
+    print("Remaining Letters:", BonusLifeLetters)
     keyboard.press_and_release("enter")
     return BonusLifeLetters
     
@@ -80,7 +80,8 @@ def main():
     n = len(words) - 1
     BonusLifeLetters = ["a","b","c","d","e","f","g","h","i","j","k","l","m","n","o","p","q","r","s","t","u","v","w","y"]
     
-    import json
+    print("Hover your cursor over the window to begin")
+
     with open('position.json', 'r') as openfile:
         Position = json.load(openfile)
 
@@ -89,10 +90,12 @@ def main():
             if MousePos.x > 0:
                 break
 
+    print("Hold escape to exit")
+
     while not keyboard.is_pressed('Esc'):
         if isturn(Position):
             letters = findLetters(Position)
-            print("Current Sequence", letters)
+            print(" Current Sequence:", letters)
             time.sleep(random.uniform(0.5, 1.5))
             BonusLifeLetters = inputword(words, letters, n, Position, BonusLifeLetters)
             time.sleep(random.uniform(0.5, 1.5))
