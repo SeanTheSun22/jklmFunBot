@@ -2,7 +2,7 @@
 
 Author: Sean Sun
 
-To setup the bot clone the repository to 'C:\...\jklmFunBot' then use the commands
+To setup the bot clone the repository to `C:\...\jklmFunBot` then use the commands
 
 `cd C:\...\jklmFunBot`
 
